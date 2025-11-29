@@ -1,156 +1,176 @@
-# CIS 376 – FINAL DEV PROFILE PROJECT
+# 🌸 Nhu Tran — Front-End Developer & UI/UX Enthusiast  
 
-**Thuan Nguyen** – Web Developer Portfolio  
-A modern, data-driven single-page developer portfolio showcasing my journey, projects, achievements, and technical reflection.
-
----
-
-## Project Information
-
-**Student Name:** THUAN NGUYEN  
-**Course**: CIS 376 – Web Development  
-**Instructor**: Dr. Barry Cumbie  
-**Project Type**: Final Developer Profile
+Welcome to **Final Project - Echo**, A soft, elegant, single-page portfolio built with vanilla HTML, CSS, Bootstrap 5, and dynamic content loaded from JSON using the Fetch API.
 
 ---
 
-## Product Overview
+## 👩‍💻 Project Overview
 
-**Product Name:** *Thuan Nguyen | Web Developer Portfolio*  
-**Description:**  
-A clean, fast, fully responsive single-page application that dynamically loads projects and achievements from JSON using the Fetch API. Features live search/filter, Markdown-based reflection rendered with zero-md, and a professional design built with modern web standards.
+**Project Title:** *Dev Project Echo*  
+**Purpose:**  
+This is my final developer profile for **CIS 376 – Web Development** (Fall 2025) with Dr. Barry Cumbie.
 
-Live Site: https://kise1205.github.io/Kise1205/  
-Source Code: https://github.com/Kise1205/Kise1205
-
----
-
-## User Story & Scenario
-
-> **As a** potential employer, recruiter, or peer developer,  
-> **I want** to quickly understand Thuan’s skills, personality, and body of work,  
-> **so that** I can evaluate his fit for opportunities or collaboration — all from one beautiful, fast-loading page.
+I wanted my digital space to feel like **me** — warm, clean, intentional, and a little dreamy.  
+Everything you see is hand-coded with love, no heavy frameworks, just pure HTML, CSS, and JavaScript.
 
 ---
 
-## Validation Results
+## 💖 Acknowledgment
 
-| Validator              | Status                          | Link |
-|------------------------|----------------------------------|------|
-| **Nu HTML Checker**    | 100% Passed – No errors         | [Nu Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Fkise1205.github.io%2FKise1205%2F) |
-| **WAVE Accessibility** | 100% Passed – Zero errors       | [WAVE Report](https://wave.webaim.org/report#/https://kise1205.github.io/Kise1205/) |
-| **Lighthouse (Bonus)** | 100/100 Performance & Accessibility | Chrome DevTools |
+Course: CIS 376 – Web Development
 
----
+Instructor: Dr. Barry Cumbie
 
-## Code Base Overview
-
-Built with **HTML5, CSS3, Bootstrap 5, vanilla JavaScript (ES6+), JSON data files**, and **zero-md** for Markdown rendering.
-
-- **index.html** – Single page with semantic structure and dynamic content areas  
-- **data/data.json & achievements.json** – All content isolated from markup
-- **script/script.js** – Fetch API, live search/filter, DOM manipulation, console debugging  
-- **styles/style.css** – Custom responsive design + modern hover effects  
-- **reflection.md** – Knowledge reflection rendered directly in-browser via zero-md
+Student Developer: Nhu Tran
 
 ---
 
-## Architecture & Data Flow
+## 🧠 User Story
+
+> **As a** busy user who schedules daily plans,  
+> **I want** a calendar interface that lets me pick a day, time, and note quickly,  
+> **so that** I can organize events without endless scrolling.
+
+---
+
+## 🚀 Live Demo & Source
+
+**Live Site:** [BetterDay Calendar – GitHub Pages](https://yourusername.github.io/betterday-calendar/)  
+**Source Code:** [GitHub Repository](https://github.com/yourusername/betterday-calendar)
+
+---
+
+## ✅ Key Features
+
+- Full-screen hero with personal introduction  
+- Responsive navbar with working hamburger menu  
+- **Projects** — dynamically loaded from `data/projects.json`  
+- **Achievements & Skills** — dynamically loaded from `data/achievements.json`  
+- Live "View Live" and "Source Code" buttons on every project  
+- Knowledge reflection rendered with **zero-md**  
+- Elegant pink footer with validation links  
+- 100% Lighthouse, Nu HTML, and WAVE clean  
+
+---
+
+## 🧱 Architecture Overview
+
+The project is built with **HTML, CSS, and Vanilla JavaScript (ES6)** using a clean modular structure.
+
+### 📂 File Structure
 
 ```
-Local Development
-     ↓ (git commit)
-GitHub Repository
-     ↓ (GitHub Pages)
-Automatic Deploy → https://kise1205.github.io/Kise1205/
-     ↓ (on load)
-Fetch API → projects.json + achievements.json → Render cards dynamically
-     ↓
-zero-md → Renders reflection.md as beautiful HTML
+nhu-tran-portfolio/
+├── index.html
+├── reflection.md
+├── data/
+│   ├── projects.json
+│   └── achievements.json
+├── assets/images/
+├── styles/style.css
+└── scripts/main.js
 ```
 
-Agile workflow using GitHub Issues as user stories and milestones.
+
 
 ---
 
-## Effectiveness & Features
+## 💻 Code Snippet – Event Logging
 
-| Feature                    | Implementation                              |
-|----------------------------|---------------------------------------------|
-| **Single-Page App**        | One HTML file – faster load, better UX      |
-| **Data-Driven Content**    | Projects & achievements from JSON           |
-| **Live Search & Filter**   | Instant client-side filtering (Bonus +10)   |
-| **Markdown Reflection**    | zero-md renders reflection.md beautifully   |
-| **Mobile-First Responsive**| Bootstrap 5 + custom CSS                    |
-| **Accessibility**          | Semantic HTML, alt text, high contrast      |
+```javascript
+saveNoteBtn.addEventListener("click", () => {
+  userNote = noteInput.value.trim();
 
----
+  if (!selectedDate || !selectedTime) {
+    resultBox.classList.replace("alert-info", "alert-danger");
+    resultBox.textContent = "❗ Please select both date and time before saving.";
+    return;
+  }
 
-## Code Snippets (Key Highlights)
+  resultBox.classList.replace("alert-warning", "alert-success");
+  resultBox.innerHTML = `
+    ✅ Event saved: <strong>${selectedDate}</strong> @ <strong>${selectedTime}</strong><br>
+    📝 Note: ${userNote || "None"}
+  `;
 
-### Dynamic Project Loading + Search (main.js)
-```js
-fetch("data/projects.json")
-  .then(res => res.json())
-  .then(projects => {
-    const renderProjects = (list) => { /* renders cards */ };
-    renderProjects(projects);
+  console.log(
+    `%c📅 Event: ${selectedDate} @ ${selectedTime} | 📝 Note: ${userNote}`,
+    "color: #f48fb1; font-weight: bold;"
+  );
+});
+```
+### 🪄 Explanation
 
-    // Live search bonus
-    searchInput.addEventListener("input", (e) => {
-      const term = e.target.value.toLowerCase();
-      const filtered = projects.filter(p => 
-        p.title.toLowerCase().includes(term) || 
-        p.description.toLowerCase().includes(term) ||
-        p.tags.some(t => t.toLowerCase().includes(term))
+This snippet ensures that users can only save an event after both the date and time are selected.
+It then logs the complete information — including note — to the browser console, and updates the confirmation box visually.
+
+```javascript
+function renderCalendar() {
+  for (let i = 1; i <= 30; i++) {
+    const btn = document.createElement("button");
+    btn.className = "slot";
+    btn.textContent = i;
+
+    btn.addEventListener("click", () => {
+      selectedDate = `${i} ${currentMonth.textContent}`;
+      selectedTime = null;
+      noteInput.value = "";
+
+      document.querySelectorAll(".calendar-grid .slot").forEach(b =>
+        b.classList.remove("selected")
       );
-      renderProjects(filtered);
+      btn.classList.add("selected");
+
+      resultBox.classList.replace("alert-success", "alert-info");
+      resultBox.innerHTML = `📅 Selected <strong>${selectedDate}</strong><br>Now choose a time.`;
     });
-  });
+
+    calendarGrid.appendChild(btn);
+  }
+}
 ```
+### 🪄 Explanation
 
-### Zero-MD Reflection Rendering (index.html)
-```html
-<zero-md src="reflection.md"></zero-md>
-<!-- Renders Markdown as clean, styled HTML in-browser -->
-```
+Generates 30 interactive date buttons.
+When clicked, the previous time selection is reset to prevent carry-over errors and the interface updates to guide the user to pick a time next.
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
-| Component          | Tool / Library |
-|--------------------|----------------|
-| **Languages**      | HTML5, CSS3, JavaScript (ES6+) |
-| **Framework**      | Bootstrap 5 |
-| **IDE**            | Visual Studio Code |
-| **AI Assistance**  | Grok (xAI) – code architecture and polish |
-
----
-
-## Attribution
-
-- Bootstrap 5 Documentation  
-- MDN Web Docs – Fetch API & modern JavaScript  
-- zero-md by zerodevx – https://github.com/zerodevx/zero-md  
-- Font Awesome & Google Fonts  
-- Grok (xAI) – code refinement and final polish
-- My brother
+| Layer             | Technology Used                                      |
+|-------------------|-------------------------------------------------------|
+| Markup            | HTML5 (semantic)                                      |
+| Styling           | CSS3 + Bootstrap 5 + Google Fonts (Playfair + Inter)  |
+| Logic             | Vanilla JavaScript (ES6+) + Fetch API                 |
+| Data              | JSON files (`projects.json`, `achievements.json`)     |
+| Reflection        | zero-md (Markdown → HTML in-browser)                  |
+| Icons             | Bootstrap Icons                                       |
+| Hosting           | GitHub Pages                                          |
+| Validation        | Nu HTML Checker • WAVE • Lighthouse                   |
 
 ---
 
-## Conclusion
+## Validation & Performance
 
-This final developer profile is not just a project — it’s my **digital business card**, my **resume**, and my **proof of growth** throughout CIS 376.  
-It showcases clean code, modern architecture, user-centered design, and a commitment to accessibility and performance.
+- Nu HTML Checker → [View Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnhu-tran.github.io%2F)  
+- WAVE Accessibility → [View Report](https://wave.webaim.org/report#/https://nhu-tran.github.io/)  
+- Lighthouse → [View Report](https://pagespeed.web.dev/report?url=https%3A%2F%2Fnhu-tran.github.io%2F)
 
-From Saigon to Florence, Alabama — this is who I am as a developer today.  
-And I’m just getting started.
+---
 
-**Thank you, Dr. Cumbie, for an amazing semester.**  
-Let’s build the future.
+## 🤝 Attribution
 
-— Thuan Nguyen  
-2025
+- Dr. Barry Cumbie — for an inspiring semester  
+- Bootstrap 5 & zero-md — for making beautiful things easy  
+- Coffee, pink aesthetics, and good music — for keeping me going  
 
---- 
+---
+
+> “Design is not just what it looks like and feels like.  
+> Design is how it works.” — Steve Jobs
+
+Thank you for visiting my little corner of the internet  
+Made with care in Florence, Alabama • 2025
+
+— Nhu Tran

@@ -1,34 +1,30 @@
 [
   {
-    "title": "Urban Disco Bravo – 2D Platformer",
-    "description": "A retro-style platformer game built with p5.js featuring smooth physics, collectibles, and pixel art.",
-    "liveUrl": "https://kise1205.github.io/urban-disco-bravo/",
-    "sourceUrl": "https://github.com/Kise1205/urban-disco-bravo",
-    "image": "assets/images/Screenshot_Thumbnail.png",
-    "tags": ["HTML", "CSS", "Bootstrap", "Responsive", "JavaScript", "Game Development"]
+    "title": "Project Alpha",
+    "desc": "Beautiful pastel-themed shopping experience",
+    "img": "image/projectAlpha.png",
+    "live": "https://nhu-tran1105.github.io/NhuTran/",
+    "code": "https://github.com/nhu-tran1105/NhuTran"
   },
   {
-    "title": "Project Alpha – Personal Blog",
-    "description": "My first multi-page responsive website using HTML, CSS, Bootstrap, and interactive JS elements.",
-    "liveUrl": "https://kise1205.github.io/Project-Alpha/",
-    "sourceUrl": "https://github.com/Kise1205/Project-Alpha",
-    "image": "assets/images/unagaming.jpg",
-    "tags": ["HTML", "CSS", "Bootstrap", "Responsive"]
+    "title": "Personal Blog Design",
+    "desc": "Minimal blog with dark mode toggle",
+    "img": "image/projectBravo.png",
+    "live": "https://nhu-tran1105.github.io/Bravo/",
+    "code": "https://github.com/nhu-tran1105/Bravo"
   },
   {
-    "title": "Project Delta – User Story (XL 👕)",
-    "description": "A redesign of the traditional credit card expiration date input.",
-    "liveUrl": "https://kise1205.github.io/Project-Delta/",
-    "sourceUrl": "https://github.com/Kise1205/Project-Delta",
-    "image": "assets/images/unagaming.jpg",
-    "tags": ["HTML", "CSS", "Bootstrap", "Responsive", "JavaScript"]
+    "title": "Project Charlie",
+    "desc": "Elegant animated invitation with RSVP form",
+    "img": "image/projectCharlie.png",
+    "live": "https://kise1205.github.io/project-charlie/",
+    "code": "https://github.com/Kise1205/project-charlie"
   },
   {
-    "title": "Project Charlie – Dev Charlie Project",
-    "description": "This project collects and displays student-built games from the class, allowing users to browse, sort, and launch each game.",
-    "liveUrl": "https://kise1205.github.io/project-charlie/",
-    "sourceUrl": "https://github.com/Kise1205/project-charlie",
-    "image": "assets/images/unagaming.jpg",
-    "tags": ["HTML", "CSS", "Bootstrap", "Responsive", "JavaScript"]
+    "title": "Project Delta",
+    "desc": "Elegant animated invitation with RSVP form",
+    "img": "image/projectDelta.png",
+    "live": "https://nhu-tran1105.github.io/BetterDay/",
+    "code": "https://github.com/nhu-tran1105/BetterDay"
   }
 ]
