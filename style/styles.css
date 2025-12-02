@@ -3,7 +3,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; background: #ffeaf4; color: #444; }
 
-/* Navbar - Luke style but pink */
 .navbar {
   background: #fff;
   padding: 1.5rem 3rem;
@@ -28,7 +27,6 @@ body { font-family: 'Inter', sans-serif; background: #ffeaf4; color: #444; }
 }
 .nav-links a:hover { color: #ad1457; }
 
-/* Full-screen hero */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(255,105,180,0.25), rgba(255,182,193,0.4));
@@ -68,7 +66,6 @@ body { font-family: 'Inter', sans-serif; background: #ffeaf4; color: #444; }
   opacity: 0.95;
 }
 
-/* Projects - Perfect 4-card grid */
 .projects-section {
   padding: 8rem 0;
   background: #fff;
@@ -118,7 +115,6 @@ body { font-family: 'Inter', sans-serif; background: #ffeaf4; color: #444; }
   text-align: center;
 }
 
-/* Reflection */
 .reflection-section {
   padding: 8rem 0;
   background: #fff8fb;
@@ -140,7 +136,6 @@ body { font-family: 'Inter', sans-serif; background: #ffeaf4; color: #444; }
   border: 2px solid #fce4ec;
 }
 
-/* Elegant Pink Footer */
 .site-footer {
   background: linear-gradient(135deg, #fce4ec, #f8bbd0);
   color: #880e4f;

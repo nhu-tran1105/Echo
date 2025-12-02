@@ -35,8 +35,8 @@ Student Developer: Nhu Tran
 
 ## 🚀 Live Demo & Source
 
-**Live Site:** [BetterDay Calendar – GitHub Pages](https://yourusername.github.io/betterday-calendar/)  
-**Source Code:** [GitHub Repository](https://github.com/yourusername/betterday-calendar)
+**Live Site:** [GitHub Pages](https://nhu-tran1105.github.io/Echo/)  
+**Source Code:** [GitHub Repository](https://github.com/nhu-tran1105/Echo)
 
 ---
 
